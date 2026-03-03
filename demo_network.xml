@@ -1,0 +1,11 @@
+<network>
+  <name>demo_network</name>
+  <bridge name='virbr1' stp='on' delay='0'/>
+  <forward mode='nat'/>
+  <ip address='10.10.0.1' netmask='255.255.255.0'>
+      <dhcp>
+           <range start='10.10.0.100' end='10.10.0.200'/>
+      </dhcp>
+  </ip>
+</network>
+
