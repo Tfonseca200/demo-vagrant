@@ -1,5 +1,5 @@
 Vagrant.configure("2") do  |config| 
-  config.vm.box = "generic/fedora39"
+  config.vm.box = "generic/ubuntu2204"
 
   config.vm.provider :libvirt do |lv|
     lv.uri = "qemu:///system"
