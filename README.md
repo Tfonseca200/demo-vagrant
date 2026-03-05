@@ -25,6 +25,16 @@ As máquinas estão conectadas em uma rede privada denominada `demo_network`:
 
 ---
 
+### O que o libvirt faz com a rede da vms:
+
+Ele cria a interface Vibr0 e Vibr1 (switch virtual) aonde as vms se comunicam. Ele gerencia as coneções com NAT(Network Address Translation) aonde as vms
+consegue se conectar pra fora mas ninguém de fora consegue "entrar" nela diretamente. 
+
+Private Network: é criado um túnel entre seu PC e a VM com ips privados.
+
+Public Network (Bridge): A VM se comporta como se tivese se conectando com o roteador fisico recebendo um IP da sua rede Wi-Fi com DHCP, como se fosse
+um dispositivo fisico.
+
 ## 📋 Pré-requisitos
 
 Para que o Vagrant consiga gerenciar as VMs via KVM no seu Linux, siga estes passos:
